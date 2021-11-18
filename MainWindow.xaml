@@ -1,0 +1,29 @@
+﻿<Window x:Class="SortingBenchmarkUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Sorting Benchmark" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="56*"></ColumnDefinition>
+            <ColumnDefinition Width="430*" />
+            <ColumnDefinition Width="231*"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <DataGrid Name="grid" Grid.Row="0" Grid.ColumnSpan="4" CanUserAddRows="False" FontSize="18" />
+        <Label Grid.Column="0" FontSize="18" Padding="20 5 20 0" Grid.ColumnSpan="3" Margin="0,349,231,0" Grid.RowSpan="2">Space-separated sequence of arr sizes</Label>
+        <TextBox x:Name="textBox" Grid.Row="2" Grid.Column="0" Margin="15,10,15,10" Padding="10 5" FontSize="18" Grid.ColumnSpan="2">
+            1024 4096 16384 65536 262144 1048576 4194304
+        </TextBox>
+        <Label Grid.Column="2" FontSize="18" Padding="20 5 20 0" Grid.ColumnSpan="2" Margin="0,349,83,0" Grid.RowSpan="2">Range of integer values</Label>
+        <TextBox Name="rangeTextBox" Grid.Row="2" Grid.Column="2" Margin="15,10,15,10" Padding="10 5" FontSize="18">2000000000</TextBox>
+        <Button Click="Button_Click" Grid.Row="2" Grid.Column="3" Padding="10 5" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center">Run</Button>
+    </Grid>
+</Window>
